@@ -57,6 +57,8 @@ describe("[PATCH] /users/:user_id/admin", () => {
       .patch(`/users/${v4()}/admin`)
       .expect(404);
 
+    console.log(response.body);
+
     expect(response.body.error).toBeTruthy();
   });
 });

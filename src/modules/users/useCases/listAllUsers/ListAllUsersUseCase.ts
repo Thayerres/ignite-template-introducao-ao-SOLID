@@ -12,7 +12,7 @@ class ListAllUsersUseCase {
     const userAlreadyExists = this.usersRepository.findById(user_id);
 
     if (!userAlreadyExists || userAlreadyExists.admin === false) {
-      throw new Error("");
+      throw new Error("User not permission or not exists");
     }
     const users = this.usersRepository.list();
 
